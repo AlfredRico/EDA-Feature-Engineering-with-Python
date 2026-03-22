@@ -230,14 +230,71 @@ import matplotlib.pyplot as plt</pre></details>
 
 <!-- SECTION 2 -->
 <div class="subsection">
-<div class="subsection-header">Data Cleaning</div>
+<div class="subsection-header">Preliminary Data Inspection</div>
 <div class="subsection-content">
-<p>[Text Here]</p>
-<details><summary>View Code</summary><pre>import pandas as pd
-import numpy as np
-import datetime as dt
-import matplotlib.pyplot as plt</pre></details>
-<div class="results"><strong>Results:</strong><p>[Results Here]</p></div>
+
+<p>Importing the data set</p>
+
+<p>data = pd.read_csv("lightning_strikes_1.csv")</p>
+
+<p>Initial data inspection, validation and exploration performed using <code>head()</code>, <code>.shape</code>, and <code>info()</code></p>
+
+<p><code>head()</code> - to examine sample record dataset structure and feature layout</p>
+
+<p><code>.shape</code> - Provides a tuple (rows, columns) to understand dataset dimensions</p>
+
+<p><code>info()</code> - to assess data types, missing values, and dataset integrity</p>
+
+<details><summary>View Code</summary><pre># Importing dataset
+df = pd.read_csv("lightning_strikes_1.csv")  
+
+# Inspect the first 5 rows
+df.head(5)  
+# Rows/ column counts
+df.shape  
+# More information about the data types
+df.info()</pre></details>
+<div class="results">
+  <strong>Results:</strong>
+
+  <p><strong>head(5):</strong></p>
+  <div style="overflow-x:auto;">
+    <table class="df-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>date</th>
+          <th>number_of_strikes</th>
+          <th>center_point_geom</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>0</td><td>2018-01-03</td><td>194</td><td>POINT(-75 27)</td></tr>
+        <tr><td>1</td><td>2018-01-03</td><td>41</td><td>POINT(-78.4 29)</td></tr>
+        <tr><td>2</td><td>2018-01-03</td><td>33</td><td>POINT(-73.9 27)</td></tr>
+        <tr><td>3</td><td>2018-01-03</td><td>38</td><td>POINT(-73.8 27)</td></tr>
+        <tr><td>4</td><td>2018-01-03</td><td>92</td><td>POINT(-79 28)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>.shape:</strong></p>
+  <pre>(3401012, 3)</pre>
+
+  <p><strong>info():</strong></p>
+  <pre>
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 3401012 entries, 0 to 3401011
+Data columns (total 3 columns):
+ #   Column             Dtype 
+---  ------             ----- 
+ 0   date               object
+ 1   number_of_strikes  int64 
+ 2   center_point_geom  object
+dtypes: int64(1), object(2)
+memory usage: 77.8+ MB
+  </pre>
+</div>
 </div>
 </div>
 <div class="subsection-summary">
