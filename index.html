@@ -164,7 +164,43 @@ summary:hover {
 }
 .summary-header.collapsed + .summary-content { display: none; }
 
+
+/* TABLE STYLING */
+.df-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.df-table th,
+.df-table td {
+  padding: 8px 10px;
+  border: 1px solid #2a2a2a;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.df-table th {
+  background: #151515;
+  color: #9aaaff;
+}
+
+.df-table tr:nth-child(even) {
+  background: #111;
+}
+
+pre {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #111;
+  border-radius: 6px;
+  border: 1px solid #2a2a2a;
+  overflow-x: auto;
+}
+
 @media (min-width: 1024px) {
+
   .container { max-width: 1200px; }
   body { font-size: 18px; }
 }
@@ -258,6 +294,7 @@ df.info()</pre></details>
   <strong>Results:</strong>
 
   <p><strong>head(5):</strong></p>
+
   <div style="overflow-x:auto;">
     <table class="df-table">
       <thead>
@@ -278,10 +315,14 @@ df.info()</pre></details>
     </table>
   </div>
 
-  <p><strong>.shape:</strong></p>
+  
+<p><strong>.shape:</strong></p>
+
   <pre>(3401012, 3)</pre>
 
-  <p><strong>info():</strong></p>
+  
+<p><strong>info():</strong></p>
+
   <pre>
 &lt;class 'pandas.core.frame.DataFrame'&gt;
 RangeIndex: 3401012 entries, 0 to 3401011
