@@ -208,9 +208,14 @@ import matplotlib.pyplot as plt</pre></details>
 
 <!-- SECTION 2 -->
 <div class="subsection">
-<div class="subsection-header">Data Cleaning</div>
+<div class="subsection-header">Preliminary Data Inspection</div>
 <div class="subsection-content">
-<p>[Text Here]</p>
+<p>Importing the data set, <code>lightning_strikes_1.csv</code></p>
+  <p>data = pd.read_csv("lightning_strikes_1.csv")</p>
+  <p>Initial data inspection, validation and exploration performed using <code>head()</code>, <code>.shape</code>, and <code>info()</code> </p>
+  <p><code>head()</code> - to examine sample record dataset structure and feature layout</p>
+  <p><code>.shape</code> - Provides a tuple (rows, columns) to understand dataset dimensions</p>
+  <p><code>info()</code> - to assess data types, missing values, and dataset integrity</p>
 <details><summary>View Code</summary><pre>import pandas as pd
 import numpy as np
 import datetime as dt
