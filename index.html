@@ -23,11 +23,14 @@ body {
 h1 { font-size: 2.5rem; margin-bottom: 10px; }
 
 h2 {
-  font-size: 1.5rem;
-  margin-top: 40px;
+  font-size: 1.8rem;              /* stronger hierarchy */
+  margin-top: 55px;              /* more breathing room */
+  margin-bottom: 10px;
   border-bottom: 1px solid #333;
   padding-left: 28px;
   position: relative;
+  font-weight: 600;              /* cleaner emphasis */
+  letter-spacing: 0.3px;         /* subtle polish */
 }
 
 p { color: #cfcfcf; }
@@ -263,7 +266,7 @@ document.querySelectorAll(".section > h2").forEach(h => {
 });
 
 document.querySelectorAll(".subsection-header").forEach(h => {
-  h.addEventListener("click", () => {
+  h.addEventListener("click", () => 
     h.parentElement.classList.toggle("collapsed");
   });
 });
