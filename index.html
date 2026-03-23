@@ -358,12 +358,13 @@ memory usage: 77.8+ MB
 <p>The <code>date</code> column is converted from string to DateTime format using <code>pd.to_datetime()</code> enabling time-based operations.</p>  
   <p></p>
   <p>A new <code>month</code> feature is extracted from the newly formatted DateTime column with the use of <code>.dt.month</code> enabling aggregated analysis.</p>
-  <details><summary>View Code</summary><pre># Convert date column to proper datetime format
+  <details><summary>View Code</summary><pre>
+  # Convert date column to proper datetime format
   df['date'] = pd.to_datetime(df['date'])
   <p></p>
   # Create new 'month' column
-    df['month'] = df['dat'].dt.month
-    df.head()
+  df['month'] = df['dat'].dt.month
+  df.head()
   </pre></details>
 <div class="results"><strong>Results:</strong><p>[Results Here]</p></div>
 </div>
