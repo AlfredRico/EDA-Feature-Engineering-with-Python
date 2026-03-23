@@ -363,7 +363,7 @@ memory usage: 77.8+ MB
   df['date'] = pd.to_datetime(df['date'])
   
   # Create new 'month' column
-  df['month'] = df['dat'].dt.month
+  df['month'] = df['date'].dt.month
   df.head()
   </pre></details>
 
@@ -461,7 +461,7 @@ df.groupby(['date']).sum().sort_values('number_of_strikes', ascending=False).hea
 <p><code>dt.month_name()</code> to improve readability using <code>str.slice</code> to omit text byond the third letter.</p>
 <details><summary>View Code</summary><pre>
 # Strikes per month
-df.groupby(['month']).sum().sort_values('number_of_strikes', ascending=False).head(12)
+df.groupby('date')['number_of_strikes'].sum().sort_values(ascending=False).head(12)
 
 # new 'month_txt' column
 df['month_txt'] = df['date'].dt.month_name().str.slice(stop=3)
@@ -541,10 +541,21 @@ df.head()
 <p>Creating a dataframe called <code>df_by_month</code> allowing access to the month, month text, and total number of srikes for each month to help with plotting.</p>
 <details><summary>View Code</summary><pre>
 # Dataframe for plotting
-df_by_month = df.groupby(['month', 'month_txt']).sum().sort_values('month', ascending=True).head(12).reset_index()
+df_by_month = (df.groupby(['month', 'month_txt'])['number_of_strikes'].sum().reset_index().sort_values('month'))
 df_by_month
+
+# Plotting
+plt.bar(x=df_by_month['month_txt'], height = df_by_month['number_of_strikes'], label = "Number of strikes")
+plt.plot()
+
+plt.xlabel("Months(2018)")
+plt.ylabel("Numer of lightning strikes")
+plt.title("Number of lightning strikes in 2018 by months")
+plt.legend()
+plt.show()
 </pre></details>
 
+<div class="results">
 <div class="results">
 <strong>Results:</strong>
 
@@ -575,6 +586,16 @@ df_by_month
 <tr><td>11</td><td>12</td><td>Dec</td><td>312097</td></tr>
 </tbody>
 </table>
+</div>
+
+<p><strong>Monthly Lightning Strike Visualization:</strong></p>
+
+<div style="text-align:center; margin-top:15px;">
+<img src="lightning_chart.png" alt="Lightning strikes by month"
+     style="max-width:100%; border-radius:8px; border:1px solid #2a2a2a;">
+</div>
+
+</div>
 </div>
 
 </div>
