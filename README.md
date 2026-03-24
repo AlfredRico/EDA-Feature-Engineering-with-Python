@@ -16,6 +16,11 @@ Use Python in Jupyter Notebook to:
 - calculate total lightning strikes by day and month,
 - visualize monthly trends.
 
+## Key Findings
+- Lightning activity peaks strongly in summer months.
+- **August** had the highest monthly total with **15,525,255** strikes.
+- Top daily strike counts were concentrated in August (for example, August 29 had 1,070,457 strikes).
+
 ## Dataset
 - **Source file:** `lightning_strikes_1.csv`
 - **Size:** 3,401,012 rows, 3 columns
@@ -39,15 +44,6 @@ Use Python in Jupyter Notebook to:
 4. Aggregate total strikes by day and rank highest-activity days.
 5. Aggregate total strikes by month.
 6. Build a monthly bar chart (`month_txt` vs `number_of_strikes`).
-
-## Key Findings
-- Lightning activity peaks strongly in summer months.
-- **August** had the highest monthly total with **15,525,255** strikes.
-- Top daily strike counts were concentrated in August (for example, August 29 had 1,070,457 strikes).
-
-## Visualization Summary
-The monthly bar chart shows a gradual rise from spring into summer, a sharp peak in August, and then a steady decline through fall and winter,
-signaling a strong seasonal behavior in 2018 lightning strikes.
 
 ## Notes
 - The full dataset is not included in the repo due to size, A truncated sample is used for demonstration.
