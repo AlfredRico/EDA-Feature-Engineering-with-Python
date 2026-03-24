@@ -6,7 +6,8 @@ The workflow demonstrates data cleaning, feature engineering, aggregation, and v
 Results show clear summer concentration, with August being the peak month.
 
 ## Project Background
-The NOAA monitors atmospheric activity, including lightning, using satellite-based systems such as the GOES satellites equipped with Geostationary Lightning Mapper (GLM) technology.  
+The NOAA monitors atmospheric activity, including lightning, using satellite-based systems such as the GOES satellites equipped with Geostationary Lightning Mapper (GLM) technology. 
+
 This project focuses on understanding how lightning activity changed over time across 2018.
 
 ## Project Goal
@@ -45,11 +46,11 @@ Use Python in Jupyter Notebook to:
 - Top daily strike counts were concentrated in August (for example, August 29 had 1,070,457 strikes).
 
 ## Visualization Summary
-The monthly bar chart shows a gradual rise from spring into summer, a sharp peak in August, and then a steady decline through fall and winter.  
-This pattern signals strong seasonal behavior in 2018 lightning strikes.
+The monthly bar chart shows a gradual rise from spring into summer, a sharp peak in August, and then a steady decline through fall and winter,
+signaling a strong seasonal behavior in 2018 lightning strikes.
 
 ## Notes
-- The full dataset is not included in the repo due to size, A truncated sample is used for demonstrationdocument the limitation.
+- The full dataset is not included in the repo due to size, A truncated sample is used for demonstration.
 
 ## Source
 - Project reference: https://shadyeggs.github.io/2018-NOAA-Lightning-Strike-Data/
