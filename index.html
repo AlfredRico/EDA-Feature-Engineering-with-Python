@@ -5,14 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>NOAA Lightning Strike Analysis</title>
 
-
-
-
-
-
-
-
-
 <style>
 
 /* ===== BASE ===== */
@@ -341,6 +333,22 @@ function toggleAll() {
 
 .subsection.collapsed > .subsection-header::before {
   transform: rotate(0deg);
+}
+
+</style>
+
+
+<style>
+
+/* VIEW CODE BUTTON CURSOR FIX */
+details summary {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* HOVER FEEL (SMOOTHER) */
+details summary:hover {
+  opacity: 0.85;
 }
 
 </style>
@@ -871,6 +879,20 @@ function toggleTheme() {
     btn.textContent = "Day";
   }
 }
+
+</script>
+
+
+<script>
+
+/* FORCE SUMMARIES COLLAPSED (FINAL FIX) */
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.querySelectorAll(".summary-header").forEach(el => {
+    el.classList.add("collapsed");
+  });
+
+});
 
 </script>
 
